@@ -15,3 +15,5 @@ This deep understanding significantly helped me during test development.
 To give each test function access to specific UI components such as LazyColumn, LazyRow, etc., I relied heavily on tagging them using Modifier.testTag().
 
 Finally, I ensured to document the code extensively to make it clear, maintainable, and easy to follow.
+
+OBS: MytestAPP class exists in app/src/andriodTest/java/com/example/jetsnack/
