@@ -48,7 +48,7 @@ class MyTestApp {
         }else{
             hLazyRowTag = "SHSnackList"
         }
-        // Bring the list of snacks from the chosen LazyRow
+        // Bring the list of snacks from the chosen LazyRow exits either on HighlightedSnacks() or Snack() from Snacks.kt
         val newlyAddedLazyRow = composeTestRule.onNodeWithTag(hLazyRowTag, useUnmergedTree = true)
         newlyAddedLazyRow.assertExists("Horizontal LazyRow for 'Newly Added' section not found with tag:$hLazyRowTag")
 
@@ -74,7 +74,7 @@ class MyTestApp {
         composeTestRule.onNodeWithText("Search Jetsnack").performClick()
         composeTestRule.waitForIdle() //Wait until the Search screen becomes visible
 
-        // Identify the Composable part responsible for text on Search Bar by making it global using testTag
+        // Tag the Composable part responsible for text on Search Bar using testTag inside the BasicTextField component within SearchBar()
         val searchBar = composeTestRule.onNodeWithTag("searchBar")
         val searchedText = "Mango"
         searchBar.performTextInput(searchedText) // Type mango within the search bar
